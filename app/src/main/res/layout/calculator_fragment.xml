@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Calculator"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textFormula"
+        android:layout_width="@dimen/calculator_fragment_text_formula_width"
+        android:layout_height="@dimen/calculator_fragment_text_formula_height"
+        android:layout_margin="@dimen/calculator_fragment_text_formula_margin"
+        android:gravity="center_vertical|end"
+        android:padding="@dimen/calculator_fragment_text_formula_padding"
+        android:text=""
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="formula" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/clear"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelChar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFormula" />
+
+    <Button
+        android:id="@+id/buttonDelChar"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/del"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintTop_toBottomOf="@+id/textFormula" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_7"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_8"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_9"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDev"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_4"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/buttonMult"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/mult"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDev" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_5"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_6"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_1"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/minus"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMult" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_3"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_2"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/buttonLeftBracket"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/left_bracket"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/button0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/_0"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRightBracket"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonLeftBracket"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/plus"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonRightBracket"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+
+    <Button
+        android:id="@+id/buttonRightBracket"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/right_bracket"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button0"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/calculate"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/buttonLogs"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+
+    <Button
+        android:id="@+id/buttonLogs"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/logs"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCalculate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLeftBracket" />
+
+    <Button
+        android:id="@+id/buttonDev"
+        android:layout_width="@dimen/calculator_fragment_button_width"
+        android:layout_height="@dimen/calculator_fragment_button_height"
+        android:layout_margin="@dimen/calculator_fragment_button_margin"
+        android:text="@string/div"
+        android:textSize="@dimen/calculator_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
